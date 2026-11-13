@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-cyclomatic-complexity-refactorer"
+version = "0.1.0"
+description = "Autonomous code refactoring advisor detecting high-complexity branches and decomposing them into clean single-responsibility functions"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-cyclomatic-complexity-refactorer = "agent_cyclomatic_complexity_refactorer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_cyclomatic_complexity_refactorer*"]
